@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project One</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: white;
+    }
+
+    p {
+      color: black;
+    }
+
+    .header {
+      position: sticky;
+      top: 60px;
+      width: 100vw;
+      height: 80px;
+      padding-top: 20px;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.4);
+
+
+    }
+
+    .headcontainer {
+      display: flex;
+      width: 85%;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo,
+    .titleindex {
+      display: flex;
+      justify-content: space-evenly;
+
+    }
+
+    .logo {
+      width: 45%;
+    }
+
+    .titleindex {
+      align-items: center;
+      width: 60%;
+      font-size: 20px;
+      cursor: pointer;
+
+    }
+
+    .titleindex div:hover {
+      color: #ff6030;
+
+    }
+
+    .logo_name {
+      font-size: 34px;
+      font-weight: bold;
+    }
+
+    .search {
+      width: 20%;
+      display: flex;
+    }
+
+    .search input {
+      width: 80%;
+      height: 25px;
+    }
+
+    .searchdiv {
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    .search-icon {
+      width: 25px;
+    }
+
+    /* Body part */
+    .main {
+      width: 87vw;
+      margin: 80px 20px 0px 100px;
+
+    }
+
+    .topsection {
+      display: flex;
+      width: 100%;
+      height: 500px;
+
+    }
+
+    .threecups {
+      width: 73%;
+      overflow: hidden;
+    }
+
+    .threecups,
+    .secondcup,
+    .thirdcup {
+      position: relative;
+
+    }
+
+
+
+    .topsection img {
+      width: 100%;
+      border-radius: 10px;
+
+
+    }
+
+    .text-on-image {
+      /* display: inline-block; */
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+      padding: 15px;
+      transform: translateY(25%);
+      transition: 1s;
+      cursor: pointer;
+    }
+
+    .text-on-image:hover {
+      transform: translateY(10%);
+    }
+
+    .text-on-image button {
+      width: 60px;
+      background-color: rgb(219, 219, 109);
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .text-on-image h1,
+    p {
+      color: white;
+    }
+
+    .rightcup .text-on-image h1 {
+      font-size: 24px;
+    }
+
+    .rightcup {
+      width: 40%;
+      height: 100%;
+
+    }
+
+    .secondcup,
+    .thirdcup {
+      width: 87%;
+      margin-left: 35px;
+
+
+    }
+
+    .thirdcup {
+      margin-top: 20px;
+    }
+
+    /* advertisement */
+
+    .advertise {
+      width: 60%;
+      margin: auto;
+      text-align: center;
+      margin-top: 90px;
+    }
+
+    .advertise p {
+      color: rgb(125, 125, 125);
+    }
+
+    /* Mid-container */
+    .recipes-title {
+      color: black;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 100px;
+    }
+
+
+    .mid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 40px;
+      row-gap: 30px;
+    }
+
+    .mid-container img {
+      width: 100%;
+      margin-bottom: 18px;
+      border-radius: 15px;
+    }
+
+    .mid-container a {
+      color: #3f3a64;
+      font-size: 22px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .mid-container p {
+      color: gray;
+    }
+
+    .element3 {
+      position: relative;
+    }
+
+    .element3 img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: bottom;
+    }
+
+    .element3 .text-on-image {
+      top: 45px;
+      transform: none;
+
+    }
+
+    .element3 .text-on-image p {
+      color: white;
+    }
+
+    .element3 .text-on-image button {
+      background-color: rgb(255, 96, 48);
+      color: white;
+      width: 180px;
+      padding: 16px 28px;
+      margin: 20px 60px;
+      cursor: pointer;
+      border-radius: 30px;
+
+    }
+
+    .element3 .text-on-image button:hover {
+      background-color: rgba(255, 96, 48, 0.8);
+    }
+
+    .element6 p {
+      font-size: 22px;
+      text-align: justify;
+    }
+
+    .element6 hr {
+      opacity: 0.2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="headcontainer">
+      <div class="logo">
+        <span class="logo_name">Sweet Store</span>
+        <div class="titleindex">
+          <div>Home</div>
+          <div>About</div>
+          <div>Blog</div>
+          <div>Contact</div>
+
+        </div>
+      </div>
+
+
+
+      <div class="search">
+        <input type="text">
+        <div class="searchdiv">
+          <img src="./icons/search.svg" alt="searchbutton" class="search-icon">
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="topsection">
+      <div class="threecups">
+        <img src="./images/1.jpg" alt="">
+        <div class="text-on-image">
+          <button>Recipe</button>
+          <h1>Amazing Milk Chocolate Cupcakes with Buttercream</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio praesentium aliquid ullam earum
+            expedita minima obcaecati, minus quis ducimus aut harum quos excepturi voluptates maxime!</p>
+          <p>Contact:+977 90123090123</p>
+        </div>
+      </div>
+      <div class="rightcup">
+        <div class="secondcup">
+          <img src="./images/2.jpg" alt="" class="secondcup-image">
+          <div class="text-on-image">
+            <h1>Amazing Milk Chocolate Cupcakes with Cream</h1>
+            <p>10 Min Cook</p>
+          </div>
+        </div>
+        <div class="thirdcup">
+          <img src="./images/3.jpg" alt="">
+          <div class="text-on-image">
+            <h1>The Best Chewy Chocolate Chip Cookies Recipe</h1>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="advertise">
+      <p>-Advertisement-</p>
+      <img src="./images/ad.jpg" alt="">
+
+    </div>
+
+    <p class="recipes-title">Latest Recipes</p>
+    <div class="mid-container">
+      <div class="element1">
+        <img src="./images/4.jpg" alt="">
+        <div>
+          <a href="#">The Best Cookie Recipes To Bake This Weekend</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus qui nulla
+            consequuntur.</p>
+
+        </div>
+
+      </div>
+
+      <div class="element2">
+        <img src="./images/5.jpg" alt="">
+        <div>
+          <a href="#">Mixed Greens with strawberry Juice Vinaigrette Recipe</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus qui nulla
+            consequuntur.</p>
+
+        </div>
+
+      </div>
+
+      <div class="element3">
+        <img src="./images/dish.jpg" alt="">
+        <div class="text-on-image">
+          <h1>Create a Stunning Website!</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio </p>
+          <button>Get Started</button>
+        </div>
+      </div>
+
+      <div class="element4">
+        <img src="./images/6.jpg" alt="">
+        <div>
+          <a href="#">Fruit Salad with Honey and Orange, strawberry, blackberry</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus qui nulla
+            consequuntur.</p>
+
+        </div>
+
+      </div>
+
+      <div class="element5">
+        <img src="./images/7.jpg" alt="">
+        <div>
+          <a href="#">Starbucks Blonde Caffe: A Good Espresso With Milk</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus qui nulla
+            consequuntur.</p>
+
+        </div>
+
+      </div>
+
+      <div class="element6">
+
+        <h2>Latest Tweets</h2>
+
+        <p><i class="fa fa-twitter" style="font-size:24px"></i> @Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Nemo,
+          alias!</p>
+        <p style="font-size: 16px;">Oct 4, 2023</p>
+
+        <hr>
+
+        <p><i class="fa fa-twitter" style="font-size:24px"></i> @Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Nemo,
+          alias!</p>
+        <p style="font-size: 16px;">Nov 24, 2023</p>
+        <hr>
+
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
