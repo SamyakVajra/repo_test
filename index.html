@@ -221,7 +221,11 @@
       color: gray;
     }
 
-    .element3 {
+    .element3,
+    .element1,
+    .element2,
+    .element4,
+    .element5 {
       position: relative;
     }
 
@@ -230,6 +234,42 @@
       height: 380px;
       object-fit: cover;
       object-position: bottom;
+    }
+
+
+
+    .element6 p {
+      font-size: 22px;
+      text-align: justify;
+    }
+
+    .element6 hr {
+      opacity: 0.2;
+    }
+
+    .mid-container .text-on-image {
+      transform: none;
+      cursor: auto;
+      top: 190px;
+      left: 5px;
+    }
+
+    .mid-container .text-on-image button {
+      background-color: green;
+      color: white;
+      width: 80px;
+      padding: 5px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .mid-container .text-on-image button:hover {
+      opacity: 0.8;
+    }
+
+    .mid-container .text-on-image {
+      transform: none;
+      top: 190px;
     }
 
     .element3 .text-on-image {
@@ -255,15 +295,6 @@
 
     .element3 .text-on-image button:hover {
       background-color: rgba(255, 96, 48, 0.8);
-    }
-
-    .element6 p {
-      font-size: 22px;
-      text-align: justify;
-    }
-
-    .element6 hr {
-      opacity: 0.2;
     }
   </style>
 </head>
@@ -339,6 +370,10 @@
     <div class="mid-container">
       <div class="element1">
         <img src="./images/4.jpg" alt="">
+        <div class="text-on-image">
+          <button>Recipe</button>
+          <i class="fa fa-clock-o" style="color: white;"> 10 Min Cook</i>
+        </div>
         <div>
           <a href="#">The Best Cookie Recipes To Bake This Weekend</a>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus qui nulla
@@ -350,6 +385,10 @@
 
       <div class="element2">
         <img src="./images/5.jpg" alt="">
+        <div class="text-on-image">
+          <button style="background-color: #ff6030;">How to</button>
+          <i class="fa fa-clock-o" style="color: white;"> 6 Min Cook</i>
+        </div>
         <div>
           <a href="#">Mixed Greens with strawberry Juice Vinaigrette Recipe</a>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus qui nulla
@@ -370,6 +409,10 @@
 
       <div class="element4">
         <img src="./images/6.jpg" alt="">
+        <div class="text-on-image">
+          <button style="background-color: red;">How to</button>
+          <i class="fa fa-clock-o" style="color: white;"> 4 Min Cook</i>
+        </div>
         <div>
           <a href="#">Fruit Salad with Honey and Orange, strawberry, blackberry</a>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus qui nulla
@@ -381,6 +424,10 @@
 
       <div class="element5">
         <img src="./images/7.jpg" alt="">
+        <div class="text-on-image">
+          <button style="background-color: darkmagenta;">Drink</button>
+          <i class="fa fa-clock-o" style="color: white;"> 5 Min Cook</i>
+        </div>
         <div>
           <a href="#">Starbucks Blonde Caffe: A Good Espresso With Milk</a>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus qui nulla
